@@ -38,6 +38,8 @@ public class StudentManagementApp {
 
 				if (ans) {
 					System.out.println("Student details added successfully...!");
+				} else {
+					System.out.println("Something went wrong...!");
 				}
 
 			} else if (c == 2) {
