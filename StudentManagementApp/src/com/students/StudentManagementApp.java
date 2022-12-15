@@ -2,6 +2,7 @@ package com.students;
 
 import java.util.Scanner;
 
+import com.students.dao.StudentDao;
 import com.students.model.Student;
 
 public class StudentManagementApp {
@@ -33,7 +34,11 @@ public class StudentManagementApp {
 
 				Student student = new Student(id, name, phone, city);
 
-				System.out.println("Student details added successfully...!");
+				Boolean ans = StudentDao.insertStudent(student);
+
+				if (ans) {
+					System.out.println("Student details added successfully...!");
+				}
 
 			} else if (c == 2) {
 //				Delete Student
