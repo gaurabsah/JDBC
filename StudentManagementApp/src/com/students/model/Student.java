@@ -4,14 +4,14 @@ public class Student {
 
 	private int studentId;
 	private String studentName;
-	private int studentPhone;
+	private long studentPhone;
 	private String studentCity;
 
 	public Student() {
 
 	}
 
-	public Student(int studentId, String studentName, int studentPhone, String studentCity) {
+	public Student(int studentId, String studentName, long studentPhone, String studentCity) {
 		super();
 		this.studentId = studentId;
 		this.studentName = studentName;
@@ -19,7 +19,7 @@ public class Student {
 		this.studentCity = studentCity;
 	}
 
-	public Student(String studentName, int studentPhone, String studentCity) {
+	public Student(String studentName, long studentPhone, String studentCity) {
 		super();
 		this.studentName = studentName;
 		this.studentPhone = studentPhone;
@@ -42,11 +42,11 @@ public class Student {
 		this.studentName = studentName;
 	}
 
-	public int getStudentPhone() {
+	public long getStudentPhone() {
 		return studentPhone;
 	}
 
-	public void setStudentPhone(int studentPhone) {
+	public void setStudentPhone(long studentPhone) {
 		this.studentPhone = studentPhone;
 	}
 

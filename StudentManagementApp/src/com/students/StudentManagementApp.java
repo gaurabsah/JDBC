@@ -2,8 +2,10 @@ package com.students;
 
 import java.util.Scanner;
 
+import com.students.model.Student;
+
 public class StudentManagementApp {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		System.out.println("Welcome to Student Management App");
 
 		Scanner scn = new Scanner(System.in);
@@ -19,8 +21,23 @@ public class StudentManagementApp {
 
 			if (c == 1) {
 //				Add Student
+
+				System.out.println("Enter the Id of the student: ");
+				int id = scn.nextInt();
+				System.out.println("Enter the name of the student: ");
+				String name = scn.next();
+				System.out.println("Enter the phone number of the student: ");
+				long phone = scn.nextLong();
+				System.out.println("Enter the city of the student: ");
+				String city = scn.next();
+
+				Student student = new Student(id, name, phone, city);
+
+				System.out.println("Student details added successfully...!");
+
 			} else if (c == 2) {
 //				Delete Student
+
 			} else if (c == 3) {
 //				Display Student details
 			} else if (c == 4) {
