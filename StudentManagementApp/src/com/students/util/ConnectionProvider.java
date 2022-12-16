@@ -11,10 +11,10 @@ public class ConnectionProvider {
 
 		try {
 //			load the driver
-			Class.forName("com.oracle.jdbc.Driver");
+			Class.forName("oracle.jdbc.driver.OracleDriver");
 
 //			create the connection
-			con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "system", "admin123");
+			con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "system", "admin123");
 
 		} catch (Exception e) {
 			e.printStackTrace();

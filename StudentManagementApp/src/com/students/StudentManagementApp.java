@@ -44,6 +44,7 @@ public class StudentManagementApp {
 
 			} else if (c == 2) {
 //				Delete Student
+				System.out.println("Enter student Id to delete: ");
 
 			} else if (c == 3) {
 //				Display Student details
