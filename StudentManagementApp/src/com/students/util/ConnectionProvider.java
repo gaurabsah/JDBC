@@ -11,11 +11,11 @@ public class ConnectionProvider {
 
 		try {
 //			load the driver
-			Class.forName("oracle.jdbc.driver.OracleDriver");
+			Class.forName("org.postgresql.Driver");
 
 //			create the connection
-			con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "system", "admin123");
-
+			con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/mydb", "postgres", "admin123");
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

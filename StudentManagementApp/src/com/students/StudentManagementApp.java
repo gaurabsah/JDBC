@@ -32,9 +32,14 @@ public class StudentManagementApp {
 				System.out.println("Enter the city of the student: ");
 				String city = scn.next();
 
-				Student student = new Student(id, name, phone, city);
+//				Student student = new Student(id, name, phone, city);
+				Student student = new Student();
+				student.setStudentId(id);
+				student.setStudentName(name);
+				student.setStudentPhone(phone);
+				student.setStudentCity(city);
 
-				Boolean ans = StudentDao.insertStudent(student);
+				boolean ans = StudentDao.insertStudent(student);
 
 				if (ans) {
 					System.out.println("Student details added successfully...!");
@@ -45,11 +50,21 @@ public class StudentManagementApp {
 			} else if (c == 2) {
 //				Delete Student
 				System.out.println("Enter student Id to delete: ");
+				int userId = scn.nextInt();
+				boolean f = StudentDao.deleteStudent(userId);
+				if (f) {
+					System.out.println("Student detail deleted successfully");
+				} else {
+					System.out.println("Something went wrong...!");
+				}
 
 			} else if (c == 3) {
 //				Display Student details
+				StudentDao.showAllStudents();
+
 			} else if (c == 4) {
 //				Update Student details
+				
 			} else if (c == 5) {
 //				Exit
 				break;
