@@ -1,0 +1,24 @@
+package com.java.jdbc.repository;
+
+import java.util.List;
+import java.util.Optional;
+
+import com.java.jdbc.dto.OwnerDTO;
+
+/**
+ * @author Gaurab Sah
+ *
+ */
+
+public interface OwnerRepository {
+	
+	void saveOwner(OwnerDTO owner);
+
+	Optional<OwnerDTO> findOwner(int ownerId);
+
+	void updatePetDetails(int ownerId, String petName);
+
+	void deleteOwner(int ownerId);
+
+	List<OwnerDTO> findAllOwners();
+}

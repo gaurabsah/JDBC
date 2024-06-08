@@ -1,0 +1,16 @@
+package com.java.jdbc.repository;
+/**
+ * @author abhishekvermaa10
+ *
+ */
+public interface OwnerRepository {
+	void saveOwner(OwnerDTO owner);
+
+	Optional<OwnerDTO> findOwner(int ownerId);
+
+	void updatePetDetails(int ownerId, String petName);
+
+	void deleteOwner(int ownerId);
+
+	List<OwnerDTO> findAllOwners();
+}
